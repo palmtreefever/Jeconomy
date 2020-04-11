@@ -1,0 +1,14 @@
+name: Jeconomy
+main: com.palmtreefever.Jeconomy.Main
+version: 1.0
+api-version: 1.15
+author: palmtreefever
+description: Economy Core
+
+commands:
+  balance:
+    description: Check a balance
+    usage: '/balance'
+  pay:
+    description: Pay a player!
+    usage: '/pay <player> #'
