@@ -18,10 +18,13 @@ public class Balance extends Get_Balance implements CommandExecutor {
 
 	@SuppressWarnings("deprecation")
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-	    //String player = sender.getName(); 
-		Player requester = (Player) sender;
-	    String senderUUID = Bukkit.getPlayer(sender.getName()).getUniqueId().toString(); 
 	    if (cmd.getName().equalsIgnoreCase("balance")) {
+	    	if(!(sender instanceof Player)) {
+				sender.sendMessage("In game command only!");
+				return true;
+			}
+			Player requester = (Player) sender;
+			String senderUUID = Bukkit.getPlayer(sender.getName()).getUniqueId().toString();
 			if (args.length == 0) { // balance
 				getBalance(requester, senderUUID, requester.getName().toString());
 				return true;

@@ -1,14 +1,19 @@
 name: Jeconomy
 main: com.palmtreefever.Jeconomy.Main
-version: 1.0
+version: 1.1
 api-version: 1.15
 author: palmtreefever
 description: Economy Core
+softdepend: [EssentialsX-2.17.2.0]
 
 commands:
   balance:
     description: Check a balance
+    aliases: bal
     usage: '/balance'
   pay:
     description: Pay a player!
     usage: '/pay <player> #'
+  transfer:
+    description: Transfer balance from Vault!
+    usage: '/transfer'

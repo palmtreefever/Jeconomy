@@ -2,15 +2,13 @@ package com.palmtreefever.Jeconomy.utils;
 
 import com.palmtreefever.Jeconomy.Main;
 
-public class Setup_Entry extends File_Handler {
+public class Setup_Entry {
 	
-	public Setup_Entry(Main main) {
-		super(main, "player_balances.yml");
-	}
-	
-
-	public void createEntry(String newPlayerUUID) {
-		config.set(newPlayerUUID, 100);
+	public static void createEntry(String newPlayerUUID) {
+		Balances balance = new Balances(); //this is causing error w/o static probably because im making a new balance when one already exists
+		Main.Balances.put(newPlayerUUID, balance);
+		balance.playerUUID = newPlayerUUID;
+		balance.balance = 5;
 		return;
 	}
 }
