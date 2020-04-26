@@ -8,7 +8,7 @@ public class Subtract_Balance extends File_Handler {
 
 	public Subtract_Balance(Main main) {
 		super(main, "player_balances.yml");
-	}
+	} 
 	//subtract from player
 	public void subBalanceADMIN(Player player, String playersUUID, String playersName, float balanceToSub) { // sub balance from server to a player
 		Balances balance = Main.Balances.get(playersUUID);

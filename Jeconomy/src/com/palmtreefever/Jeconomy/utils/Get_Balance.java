@@ -29,6 +29,26 @@ public class Get_Balance extends File_Handler {
 		// search seperate yml file for Town if doesnt exist return doesn't exist
 		return;
 	} 
+	
+	
+	public float getBalanceT(Player requester, String balancersUUID, String balancersName) { // get balance associated with someones UUID
+		if(!Main.Balances.containsKey(balancersUUID)) {
+			requester.sendMessage("Player isn't in the database!");
+			if(requester.isOnline() && requester.getUniqueId().toString().equals(balancersUUID)) {
+				//System.out.print(Main.Balances.keySet());
+				main.setup_entry.createEntry(balancersUUID);	
+				float bal1 = Main.Balances.get(balancersUUID).balance;
+				return bal1;
+			}
+			return 0;
+		} else {
+			float bal = Main.Balances.get(balancersUUID).balance;
+			//requester.sendMessage(balancersName + " balance is $" + bal);
+			return bal;
+		}
+	}
+	
+	
 
 }
 //so if they do /bal <player>

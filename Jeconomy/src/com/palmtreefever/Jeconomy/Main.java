@@ -20,7 +20,6 @@ import com.palmtreefever.Jeconomy.utils.Setup_Entry;
 import com.palmtreefever.Jeconomy.utils.Balances;
 import com.palmtreefever.Jeconomy.utils.Subtract_Balance;
 
-
 public class Main extends JavaPlugin implements Listener {
 	
 	private Economy Essentialsecon;
